@@ -6,7 +6,7 @@ Code and data accompanying the paper:
 > **"Power Estimation and Optimal Work–Charging Scheduling of Construction Electric Vehicles via Mobile Charging Stations."**
 > (\* equal contribution) — arXiv link coming soon.
 >
-> This repository is the "dataset and scripts" link referenced in the paper's abstract (https://shorturl.at/s4jP1).
+> This repository (`github.com/ghosh-avik/CEV-MCS-Power-Estimation-and-Joint-Scheduling`) is the "dataset and scripts" link in the paper's abstract (https://bit.ly/4x7jQMY) and its reference [27].
 
 Construction electric vehicles (CEVs) are a clean alternative to diesel construction equipment, but their adoption is held back by sparse onsite charging infrastructure, limited CEV mobility, and poor understanding of their power consumption. This repository addresses both gaps with two coupled components:
 
@@ -123,7 +123,7 @@ python scenario_2_comparison.py                 # Scenario 2 operation panel (pa
 python scenario_1_mip_convergence_analysis.py   # Scenario 4 MIP convergence (paper Fig. 7, Appendix F)
 ```
 
-These read only the included `results/` CSVs, write PNGs into `Joint Scheduling/`, and print the per-strategy demand peaks (which reproduce the NCDC values in Table IV, e.g. Scenario 1: 1.95/2.44/1.82 kW × $20.12/kW ≈ $39/$49/$37).
+These read only the included `results/` CSVs, write their outputs into `Joint Scheduling/` (`scenario1_operation_zoom.png`, `scenario2_operation_zoom.png`, `scenario_1_mip_convergence_normalized.png` plus a summary CSV), and print the per-strategy demand peaks (which reproduce the NCDC values in Table IV, e.g. Scenario 1: 1.95/2.44/1.82 kW × $20.12/kW ≈ $39/$49/$37).
 
 ---
 
@@ -144,3 +144,5 @@ Code and data are released under the [MIT License](LICENSE).
 ## Acknowledgment
 
 This work was supported by the California Energy Commission (EPC-24-031). A. Taşçıkaraoğlu was also supported by the TÜBİTAK 2219 International Postdoctoral Research Fellowship Program and the TÜBA Distinguished Young Scientist Award. M. A. Beyazıt is supported by the TÜBİTAK BİDEB 2211 National PhD Scholarship Program.
+
+The authors gratefully acknowledge the help of Shubhan Mital in manually labeling the dataset for the excavator subactivity power consumption analysis. During the preparation of this work the authors used Claude to help with the visualization of the results figures. After using this tool/service, the authors reviewed and edited the content as needed and take full responsibility for the content of the article.

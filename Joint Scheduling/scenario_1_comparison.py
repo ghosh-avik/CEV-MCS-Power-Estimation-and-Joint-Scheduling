@@ -364,7 +364,7 @@ def main():
     # Zoomed figure (the paper's version): the CEV-work row (c) is zoomed to
     # 08:00-18:00 and every row gets its own x-axis; taller canvas for the
     # extra labels.
-    make_figure(*shared, out_stub="2_scenario1_operation_zoom",
+    make_figure(*shared, out_stub="scenario1_operation_zoom",
                 zoom_work_end=18.0, fig_h=11.5)
 
     print("\nDemand peaks per strategy [kW]:")

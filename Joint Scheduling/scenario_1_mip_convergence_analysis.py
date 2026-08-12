@@ -219,12 +219,12 @@ def main():
 
     fig.tight_layout()
 
-    png = os.path.join(HERE, "2_mip_convergence_normalized.png")
+    png = os.path.join(HERE, "scenario_1_mip_convergence_normalized.png")
     fig.savefig(png, dpi=200, bbox_inches="tight")
     print(f"Saved figure: {png}")
 
     # ---- Summary CSV ------------------------------------------------------
-    out_csv = os.path.join(HERE, "2_mip_convergence_summary.csv")
+    out_csv = os.path.join(HERE, "scenario_1_mip_convergence_summary.csv")
     with open(out_csv, "w", newline="") as fh:
         w = csv.writer(fh)
         w.writerow(["run", "n_points", "t_first_incumbent_s", "t_last_s",

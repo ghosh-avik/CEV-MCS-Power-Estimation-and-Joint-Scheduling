@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Local tooling (machine-specific settings, not part of the release)
+.claude/
+.vscode/
