@@ -1,0 +1,63 @@
+Running HiGHS 1.14.0 (git hash: 7df0786de3): Copyright (c) 2026 under Apache 2.0 license terms
+Using BLAS: blastrampoline 
+MIP has 4443 rows; 3271 cols; 47338 nonzeros; 2304 integer variables (2304 binary)
+Coefficient ranges:
+  Matrix  [2e-01, 8e+01]
+  Cost    [7e-02, 2e+03]
+  Bound   [1e+00, 1e+00]
+  RHS     [1e+00, 2e+02]
+Presolving model
+1961 rows, 1180 cols, 43453 nonzeros 0s
+1527 rows, 813 cols, 21858 nonzeros 0s
+923 rows, 676 cols, 5452 nonzeros 0s
+813 rows, 640 cols, 5365 nonzeros 0s
+Presolve reductions: rows 813(-3630); columns 640(-2631); nonzeros 5365(-41973) 
+
+Solving MIP model with:
+   813 rows
+   640 cols (329 binary, 0 integer, 2 implied int., 309 continuous, 0 domain fixed)
+   5365 nonzeros
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic;
+     I => Shifting; J => Feasibility jump; L => Sub-MIP; P => Empty MIP; R => Randomized rounding;
+     S => Solve LP; T => Evaluate node; U => Unbounded; X => User solution; Y => HiGHS solution;
+     Z => ZI Round; l => Trivial lower; p => Trivial point; u => Trivial upper; z => Trivial zero
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+         0       0         0   0.00%   0               inf                  inf        0      0      0         0     0.3s
+         0       0         0   0.00%   40.48090955     inf                  inf        0      0      4       540     0.3s
+ C       0       0         0   0.00%   49.32602392     7066.376699       99.30%      741     42     29      1042     0.4s
+ L       0       0         0   0.00%   50.93950499     69.98610626       27.21%     2322     98     29      1331     1.6s
+
+0.3% inactive integer columns, restarting
+Model after restart has 807 rows, 633 cols (327 bin., 0 int., 0 impl., 306 cont., 0 dom.fix.), and 5198 nonzeros
+
+         0       0         0   0.00%   50.97136777     69.98610626       27.17%       36      0      0      3472     1.7s
+         0       0         0   0.00%   50.97204524     69.98610626       27.17%       36     21      4      3682     1.7s
+ L       0       0         0   0.00%   56.6672432      69.98207018       19.03%     2174    107      4      8993     6.1s
+ B      39       2        12  34.57%   56.6672432      69.45718925       18.41%     2222     29    405     30072    10.0s
+ T      62       9        20  51.20%   57.86894049     69.2220468        16.40%     2952     80    548     43705    11.5s
+ T      94       7        29  56.74%   57.86894049     68.48887983       15.51%     2979     80    687     47859    12.0s
+       149       0        61 100.00%   68.48887983     68.48887983        0.00%     4769    112   1489     71273    15.3s
+
+Solving report
+  Status            Optimal
+  Primal bound      68.4888798314
+  Dual bound        68.4888798314
+  Gap               0% (tolerance: 0.01%)
+  P-D integral      3.5468458557
+  Solution status   feasible
+                    68.4888798314 (objective)
+                    0 (bound viol.)
+                    1.59872115546e-14 (int. viol.)
+                    0 (row viol.)
+  Timing            15.31
+  Max sub-MIP depth 6
+  Nodes             149
+  Repair LPs        0
+  LP iterations     71273
+                    46668 (strong br.)
+                    3831 (separation)
+                    11657 (heuristics)

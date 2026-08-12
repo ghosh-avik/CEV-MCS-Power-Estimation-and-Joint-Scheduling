@@ -1,0 +1,9 @@
+# Dependencies for the figure/analysis scripts in this folder
+# (scenario_1_comparison.py, scenario_2_comparison.py,
+#  scenario_1_mip_convergence_analysis.py).
+# Tested with Python 3.12: numpy 2.1, matplotlib 3.10.
+#
+# The Julia optimization code in the Scenario folders is independent of this;
+# it needs Julia with JuMP, HiGHS, Plots, DataFrames, CSV.
+numpy>=1.26
+matplotlib>=3.8

@@ -1,0 +1,17 @@
+Metric,Value
+Objective_Value,2852.07
+Total_Energy_Cost_USD,18.72
+Total_CO2_Cost_USD,0.33
+NC demand charge_USD,1159.9
+OP demand charge_USD,643.12
+Total_Missed_Work_Penalty_USD,1000.0
+Total_Travel_Penalty_USD,30.0
+Total_Grid_Energy_kWh,48.61
+Total_CO2_Emissions_kg,6.52
+NCD_Peak_kW,57.65
+OPD_Peak_kW,31.25
+Total_Missed_Work_hour,0.5
+Total_MCS_Travel_hour,1.5
+MIP_Gap_percent,75.52
+Status,TIME_LIMIT
+Solve_Time_s,3600.93
