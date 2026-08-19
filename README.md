@@ -6,7 +6,7 @@ Code and data accompanying the paper:
 > **"Power Estimation and Optimal Work–Charging Scheduling of Construction Electric Vehicles via Mobile Charging Stations."**
 > (\* equal contribution) — arXiv link coming soon. The paper has been submitted for publication in IEEE Transactions on Smart Grid.
 >
-> This repository (`github.com/ghosh-avik/CEV-MCS-Power-Estimation-and-Joint-Scheduling`) is the "dataset and scripts" repository linked in the paper's abstract and cited as its reference [27].
+> This repository (`github.com/ghosh-avik/CEV-MCS-Power-Estimation-and-Joint-Scheduling`) is the "dataset and scripts" repository linked in the paper's abstract and cited as its reference [26].
 
 Construction electric vehicles (CEVs) are a clean alternative to diesel construction equipment, but their adoption is held back by sparse onsite charging infrastructure, limited CEV mobility, and poor understanding of their power consumption. This repository addresses both gaps with two coupled components:
 
