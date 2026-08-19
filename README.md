@@ -96,7 +96,7 @@ Each scenario driver can run four strategies, selected via the `MCS_OPTIMIZER_CH
 Requires [Julia](https://julialang.org/) (tested with ≥ 1.10) with `JuMP`, `HiGHS`, `Plots`, `DataFrames`, `CSV`:
 
 ```julia
-using Pkg; Pkg.add(["JuMP", "HiGHS", "Plots", "DataFrames", "CSV"])
+using Pkg; Pkg.add(["JuMP", "HiGHS", "MathOptInterface", "Plots", "DataFrames", "CSV"])
 ```
 
 Then, from a scenario folder, run the ladder in order (Reference must come first on a fresh clone only if you want to regenerate the frozen schedule — the solved `ref_schedule_Reference.csv` files are already included):
@@ -110,6 +110,8 @@ MCS_OPTIMIZER_CHOICE=OPTIMAL   julia mcs_optimization_main_v4_real.jl
 ```
 
 Each run writes a timestamped folder `<CHOICE>_Site_<n>_MCS_<m>_CEV_<e>_<timestamp>/` under `simple_dataset/results/` containing the cost/KPI breakdown, power and SOE profiles, the solved CEV schedule, the MIP convergence trace, and summary plots. The solver time limit defaults to 1 hour (as in Table IV) and is overridable, e.g. `MCS_TIME_LIMIT_SEC=18000` for the 5-hour extended Scenario 4 re-solve of Appendix F.
+
+> **Caution:** every `Reference` run *overwrites* `results/ref_schedule_Reference.csv`, the frozen CEV schedule that B1 and B2 pin to. If you run `Reference` with a reduced time limit (e.g. a quick smoke test via `MCS_TIME_LIMIT_SEC`), the degraded schedule will shift subsequent B1/B2 results away from Table IV. With the included schedule, B1/B2 reproduces its Table IV cost exactly.
 
 The runs used in the paper are included in each scenario's `results/` folder, so all figures and Table IV values can be verified without re-solving. Solving uses HiGHS (open source); every instance except the proposed strategy in Scenario 4 proves optimality within the 1-hour limit (see Appendix F for why Scenario 4's residual gap does not affect the reported cost).
 
@@ -137,12 +139,34 @@ These read only the included `results/` CSVs, write their outputs into `Joint Sc
 | Figs. 4 and 8 (scenario operation panels) | `scenario_1_comparison.py`, `scenario_2_comparison.py` |
 | Fig. 7 (solver convergence, Appendix F) | `scenario_1_mip_convergence_analysis.py`; extended run via `MCS_TIME_LIMIT_SEC=18000` |
 
+## Citation
+
+If you use this code or dataset, please cite the paper:
+
+```bibtex
+@misc{ghosh2026cev,
+  title         = {Power Estimation and Optimal Work--Charging Scheduling of
+                   Construction Electric Vehicles via Mobile Charging Stations},
+  author        = {Ghosh, Avik and Ta{\c{s}}{\c{c}}{\i}karao{\u{g}}lu, Ak{\i}n and
+                   Rojas, Daniela and Beyaz{\i}t, Muhammed A. and
+                   Salehizadeh, Mohammad Reza and Chia, Keaton and Doppelt, Sasha and
+                   Ferry, Michael and Kleissl, Jan and Dey, Sujit and Shi, Yuanyuan},
+  year          = {2026},
+  eprint        = {XXXX.XXXXX},
+  archivePrefix = {arXiv},
+  primaryClass  = {eess.SY},
+  url           = {https://arxiv.org/abs/XXXX.XXXXX},
+  note          = {Submitted for publication in IEEE Transactions on Smart Grid.
+                   arXiv identifier to be updated.}
+}
+```
+
 ## License
 
 Code and data are released under the [MIT License](LICENSE).
 
 ## Acknowledgment
 
-This work was supported by the California Energy Commission (EPC-24-031). A. Taşçıkaraoğlu was also supported by the TÜBİTAK 2219 International Postdoctoral Research Fellowship Program and the TÜBA Distinguished Young Scientist Award. M. A. Beyazıt is supported by the TÜBİTAK BİDEB 2211 National PhD Scholarship Program.
+This work was supported by the California Energy Commission under the award number EPC-24-031. A. Taşçıkaraoğlu was also supported by the TÜBİTAK 2219 International Postdoctoral Research Fellowship Program and the TÜBA Distinguished Young Scientist Award. M. A. Beyazıt was supported by the Scientific and Technological Research Council of Türkiye (TÜBİTAK) Directorate of Science Fellowships and Grant Programmes (BİDEB) 2211 National PhD Scholarship Program. M. R. Salehizadeh was supported through the QRRRF-funded Driving Resilience project (CQU.0001.2324D.RFI).
 
 The authors gratefully acknowledge the help of Shubhan Mital in manually labeling the dataset for the excavator subactivity power consumption analysis. During the preparation of this work the authors used Claude to help with the visualization of the results figures. After using this tool/service, the authors reviewed and edited the content as needed and take full responsibility for the content of the article.
