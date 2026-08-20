@@ -3,7 +3,7 @@
 Code and data accompanying the paper:
 
 > A. Ghosh\*, A. Taşçıkaraoğlu\*, D. Rojas, M. A. Beyazıt, M. R. Salehizadeh, K. Chia, S. Doppelt, M. Ferry, J. Kleissl, S. Dey, and Y. Shi,
-> **"Power Estimation and Optimal Work–Charging Scheduling of Construction Electric Vehicles via Mobile Charging Stations."**
+> **["Power Estimation and Optimal Work–Charging Scheduling of Construction Electric Vehicles via Mobile Charging Stations."](https://arxiv.org/abs/2608.18494)**
 > (\* equal contribution). The paper has been submitted for publication in IEEE Transactions on Smart Grid.
 >
 > This repository (`github.com/ghosh-avik/CEV-MCS-Power-Estimation-and-Joint-Scheduling`) is the "dataset and scripts" repository linked in the paper's abstract and cited as its reference [26].
