@@ -4,7 +4,7 @@ Code and data accompanying the paper:
 
 > A. Ghosh\*, A. Taşçıkaraoğlu\*, D. Rojas, M. A. Beyazıt, M. R. Salehizadeh, K. Chia, S. Doppelt, M. Ferry, J. Kleissl, S. Dey, and Y. Shi,
 > **"Power Estimation and Optimal Work–Charging Scheduling of Construction Electric Vehicles via Mobile Charging Stations."**
-> (\* equal contribution) — arXiv link coming soon. The paper has been submitted for publication in IEEE Transactions on Smart Grid.
+> (\* equal contribution). The paper has been submitted for publication in IEEE Transactions on Smart Grid.
 >
 > This repository (`github.com/ghosh-avik/CEV-MCS-Power-Estimation-and-Joint-Scheduling`) is the "dataset and scripts" repository linked in the paper's abstract and cited as its reference [26].
 
@@ -93,7 +93,7 @@ Each scenario driver can run four strategies, selected via the `MCS_OPTIMIZER_CH
 
 ### Running it
 
-Requires [Julia](https://julialang.org/) (tested with ≥ 1.10) with `JuMP`, `HiGHS`, `Plots`, `DataFrames`, `CSV`:
+Requires [Julia](https://julialang.org/) (tested with ≥ 1.10) with `JuMP`, `HiGHS`, `MathOptInterface`, `Plots`, `DataFrames`, `CSV`:
 
 ```julia
 using Pkg; Pkg.add(["JuMP", "HiGHS", "MathOptInterface", "Plots", "DataFrames", "CSV"])
@@ -152,12 +152,11 @@ If you use this code or dataset, please cite the paper:
                    Salehizadeh, Mohammad Reza and Chia, Keaton and Doppelt, Sasha and
                    Ferry, Michael and Kleissl, Jan and Dey, Sujit and Shi, Yuanyuan},
   year          = {2026},
-  eprint        = {XXXX.XXXXX},
+  eprint        = {2608.18494},
   archivePrefix = {arXiv},
   primaryClass  = {eess.SY},
-  url           = {https://arxiv.org/abs/XXXX.XXXXX},
-  note          = {Submitted for publication in IEEE Transactions on Smart Grid.
-                   arXiv identifier to be updated.}
+  url           = {https://arxiv.org/abs/2608.18494},
+  note          = {Submitted for publication in IEEE Transactions on Smart Grid.}
 }
 ```
 
